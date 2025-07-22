@@ -8,7 +8,7 @@ public static class MenuPrincipal
 
         do
         {
-            Console.Write("BEM VINDO AO SISTEMA DE CADASTRO DE ALUNOS \n \n" +
+            Console.Write("\nBEM VINDO AO SISTEMA DE CADASTRO DE ALUNOS \n \n" +
                           " 0 - SAIR DO SISTEMA;\n " +
                           "1 - CADASTRAR ALUNO;\n " +
                           "2 - LISTAR ALUNOS;\n " +
@@ -25,6 +25,7 @@ public static class MenuPrincipal
                     CadastrarAluno.Cadastrar();
                     break;
                 case "2":
+                    ListarAlunos.Listar();
                     break;
                 case "3":
                     break;
