@@ -8,28 +8,23 @@ public static class MenuPrincipal
 
         do
         {
-            Console.Write("\nBEM VINDO AO SISTEMA DE CADASTRO DE ALUNOS \n \n" +
-                          " 0 - SAIR DO SISTEMA;\n " +
-                          "1 - CADASTRAR ALUNO;\n " +
-                          "2 - LISTAR ALUNOS;\n " +
-                          "3 - MOSTRAR ESTATISTÍCAS;\n \n" +
-                          "DIGITE A OPERAÇÂO DESEJADA: ");
+            Console.Write(Exceptions.ProgramMessages.MENU_PRINCIPAL_INIT_MESSAGE());
     
             entradaSistema = Console.ReadLine();
 
             switch (entradaSistema)
             {
                 case "0":
-                    Console.WriteLine("ENCERRANDO SISTEMA...");
+                    Console.WriteLine(Exceptions.ProgramMessages.SHUT_DOWN_MESSAGE());
                     break;
                 case "1":
-                    CadastrarAluno.Cadastrar();
+                    CadastrarAlunoUseCase.Cadastrar();
                     break;
                 case "2":
-                    ListarAlunos.Listar();
+                    MostrarEstatisticasUseCase.ListarOsAlunos();
                     break;
                 case "3":
-                    MostrarEstatisticas.Mostrar();
+                    EstatisticasMenu.Mostrar();
                     break;
                 default:
                     Console.WriteLine(Exceptions.ErrorMessages.INVALID_OPERATION());
