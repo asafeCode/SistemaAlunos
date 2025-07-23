@@ -3,20 +3,19 @@ using SistemaAlunos.Validator;
 
 namespace SistemaAlunos.UseCases;
 
-public static class CadastrarAluno
+public static class CadastrarAlunoUseCase
 {
     public static void Cadastrar()
     {
         Console.WriteLine("\nCADASTRO DE ALUNOS:");
         
         string nomeAluno = LerNome("NOME:");
-        
         decimal nota1 = LerNota("1ª NOTA:");
         decimal nota2 = LerNota("2ª NOTA:");
         decimal nota3 = LerNota("3ª NOTA:");
         
         var aluno = new Aluno(nomeAluno, nota1, nota2, nota3);
-        RepositorioAlunos.ListaAlunos.Add(aluno);
+        RepositorioAluno.ListaAlunos.Add(aluno);
     }
 
     private static decimal LerNota(string mensagem)
@@ -33,7 +32,7 @@ public static class CadastrarAluno
 
             if (!entradaValida)
             {
-                Console.WriteLine(Exceptions.ErrorMessages.INVALID_NAME());
+                Console.WriteLine(Exceptions.ErrorMessages.INVALID_GRADE());
             }
             
             

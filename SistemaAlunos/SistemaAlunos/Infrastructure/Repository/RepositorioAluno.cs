@@ -1,6 +1,6 @@
 ﻿namespace SistemaAlunos.UseCases;
 
-public static class RepositorioAlunos
+public static class RepositorioAluno
 {
     public static List<Aluno> ListaAlunos = new List<Aluno>();
 }
