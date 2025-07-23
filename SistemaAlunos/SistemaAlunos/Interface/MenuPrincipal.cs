@@ -20,6 +20,7 @@ public static class MenuPrincipal
             switch (entradaSistema)
             {
                 case "0":
+                    Console.WriteLine("ENCERRANDO SISTEMA...");
                     break;
                 case "1":
                     CadastrarAluno.Cadastrar();
@@ -28,9 +29,10 @@ public static class MenuPrincipal
                     ListarAlunos.Listar();
                     break;
                 case "3":
+                    MostrarEstatisticas.Mostrar();
                     break;
                 default:
-                    
+                    Console.WriteLine("INSIRA UMA OPERAÇÃO VÁLIDA");
                     break;
             }
     
