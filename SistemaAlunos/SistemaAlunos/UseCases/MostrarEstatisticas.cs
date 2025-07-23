@@ -42,7 +42,7 @@ public static class MostrarEstatisticas
                     
                     break;
                 default:
-                    Console.WriteLine("INSIRA UMA OPERAÇÃO VÁLIDA");
+                    Console.WriteLine(Exceptions.ErrorMessages.INVALID_OPERATION());
                     break;
             }
     
