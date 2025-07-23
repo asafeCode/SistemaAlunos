@@ -16,4 +16,14 @@ public class ErrorMessages: Exception
     {
         return "OPERACAO INVALIDA. Por favor insira uma operação válida";
     }
+    
+    public static string IS_NULL_STUDENT_APPROVED()
+    {
+        return "LISTA DE ESTUDANTES APROVADOS VAZIA.";
+    }
+    
+    public static string IS_NULL_STUDENT_FAILED()
+    {
+        return "LISTA DE ESTUDANTES REPROVADOS VAZIA.";
+    }
 }
